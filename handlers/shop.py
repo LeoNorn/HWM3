@@ -9,13 +9,13 @@ shop_router = Router()
 
 @shop_router.callback_query(F.data == "start_shop")
 async def shop(message: types.Message):
-    # kb = ReplyKeyboardMarkup(
-    #     keyboard=[[
-    #         KeyboardButton(text="Манга"),
-    #         KeyboardButton(text="Книги"),
-    #         KeyboardButton(text="Комиксы")
-    #     ]]
-    # )
+    kb = ReplyKeyboardMarkup(
+        keyboard=[[
+            KeyboardButton(text="Манга"),
+            KeyboardButton(text="Книги"),
+            KeyboardButton(text="Комиксы")
+        ]]
+    )
     await message.answer("Выберите категорию ниже:")
 
 
